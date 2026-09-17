@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест видеоплеера MAX</title>
 
     <style>
         body {
@@ -16,7 +15,7 @@
 
         .container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         h1 {
@@ -24,17 +23,12 @@
             margin-bottom: 20px;
         }
 
-        video {
+        iframe {
             width: 100%;
-            max-width: 900px;
-            display: block;
+            height: 500px;
+            border: none;
             background: #000;
             border-radius: 10px;
-        }
-
-        p {
-            color: #bbb;
-            line-height: 1.5;
         }
     </style>
 </head>
@@ -43,18 +37,13 @@
 
 <div class="container">
 
-    <h1>Тест HTML5-видеоплеера внутри мини-приложения MAX</h1>
+    <h1>Тест внешнего видеоплеера через iframe</h1>
 
-    <video controls playsinline preload="metadata">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-        Ваш браузер не поддерживает HTML5-видео.
-    </video>
-
-    <p>
-        Если появился видеоплеер и видео воспроизводится,
-        значит MAX позволяет воспроизводить внешнее HTML5-видео
-        внутри мини-приложения.
-    </p>
+    <iframe
+        src="player.html"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
 
 </div>
 
